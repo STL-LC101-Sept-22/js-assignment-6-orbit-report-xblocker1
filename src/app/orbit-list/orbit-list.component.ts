@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input,} from '@angular/core';
 import { Satellite } from '../satellite';
 
 @Component({
@@ -6,12 +6,18 @@ import { Satellite } from '../satellite';
   templateUrl: './orbit-list.component.html',
   styleUrls: ['./orbit-list.component.css']
 })
-
 export class OrbitListComponent implements OnInit {
+	
 
-  @Input() satellites: Satellite[];
+  @Input() satellites: Satellite[] = [
+	// {name: 'SiriusXm', type: 'communication', operational: true, orbitType: 'Low', launchDate: '2009-03-21', isSpaceDebris(): false},
+	// {name: 'Cat Scanner', type: 'Imaging', operational:true , orbitType: 'LOW', launchDate: '2012-01-05', isSpaceDebris(): true},
+	// {name: 'Weber Grill', type: 'Space Debris', operational:false , orbitType: 'HIGH', launchDate: '1996-03-25', isSpaceDebris(): true},
+	// {name: 'GPS 938', type: 'Positioning', operational: true, orbitType: 'HIGH', launchDate: '2001-11-20', isSpaceDebris(): true},
+	// {name: 'ISS', type: 'Space Station', operational: true, orbitType: 'LOW', launchDate: '1998-11-20',isSpaceDebris(): true}
+  ]
   constructor() { }
-
+  
   ngOnInit() {
   }
 
@@ -26,5 +32,4 @@ export class OrbitListComponent implements OnInit {
 			return 0;
 		});
 	}
-
-}
+};
